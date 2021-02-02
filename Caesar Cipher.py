@@ -23,25 +23,15 @@ while True:
     while True:
         if answer.strip() in "encrypt":
             message = str(input("Please enter the code you'd like to encrypt: "))
-            encrypt_for = ""
-            for i in message:
-                encrypt_for += message
-                if i not in Encrypt:
-                    print("Invalid input. Please try again.")
-                else:
-                    break
-            if True:
+            if message not in Encrypt:
+                print("Invalid input. Please try again.")
+            elif message in Encrypt:
                 break
         else:
             message = input("Please enter the code you'd like to decrypt: ")
-            decrypt_for = ""
-            for t in message:
-                decrypt_for += message
-                if t not in Decrypt:
-                    print("Invalid input. Please try again.")
-                else:
-                    break
-            if True:
+            if message not in Decrypt:
+                print("Invalid input. Please try again.")
+            elif message in Decrypt:
                 break
 
     def cryptocode():
