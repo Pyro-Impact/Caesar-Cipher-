@@ -26,7 +26,7 @@ while True:
             encrypt_check = all(c in Encrypt for c in message)
 
             if encrypt_check is False:
-                print("invalid lol")
+                print("Invalid input. Please try again.")
                 continue
             else:
                 break
