@@ -23,15 +23,21 @@ while True:
     while True:
         if answer.strip() in "encrypt":
             message = str(input("Please enter the code you'd like to encrypt: "))
-            if message not in Encrypt:
-                print("Invalid input. Please try again.")
-            elif message in Encrypt:
+            encrypt_check = all(c in Encrypt for c in message)
+
+            if encrypt_check is False:
+                print("invalid lol")
+                continue
+            else:
                 break
         else:
             message = input("Please enter the code you'd like to decrypt: ")
-            if message not in Decrypt:
+            decrypt_check = all(c in Decrypt for c in message)
+
+            if decrypt_check is False:
                 print("Invalid input. Please try again.")
-            elif message in Decrypt:
+                continue
+            else:
                 break
 
     def cryptocode():
@@ -39,6 +45,7 @@ while True:
         if answer.lower() == "encrypt":
             for e in message:
                 result += Encrypt[e]
+
         elif answer.lower() == "decrypt":
             for r in message:
                 result += Decrypt[r]
@@ -59,5 +66,6 @@ while True:
     if "yes" in restart_confirm.lower():
         print("The program has reset.")
         continue
+
     else:
         break
