@@ -15,4 +15,4 @@ or the question that asks to restart or quit, then the program prints "Invalid I
 back.
 4. 2 different dictionaries for encrypt and decrypt
 5. useage of while True loops for many sections of the user's usage of the tool.
-
+6. New modules to shorten the code in the main.
