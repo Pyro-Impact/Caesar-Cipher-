@@ -1,6 +1,6 @@
 def confirm_restart():
     while True:
-        restart_confirm = input("Would you like to encrypt/decrypt another message? \n"
+        restart_confirm = input("Would you like to restart the program? \n"
                                 "Type yes or no: ")
         restart_confirm1 = restart_confirm.strip().lower()
         if restart_confirm1 in ["yes", "no"]:

@@ -1,14 +1,18 @@
 from Shift15.Dictionaries import Encrypt, Decrypt
 
 
-def cryptocode(answer, message):
-    result = ""
-    if answer.lower() == "encrypt":
-        for e in message:
-            result += Encrypt[e]
+class FinalCode:
+    def __init__(self, answer, message):
+        self.answer = answer
+        self.message = message
 
-    elif answer.lower() == "decrypt":
-        for r in message:
-            result += Decrypt[r]
+    def cryptocode(self):
+        result = ""
+        if self.answer.lower() == "encrypt":
+            for e in self.message:
+                result += Encrypt[e]
 
-    return result
+        elif self.answer.lower() == "decrypt":
+            for r in self.message:
+                result += Decrypt[r]
+        return result
