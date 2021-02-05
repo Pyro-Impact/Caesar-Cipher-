@@ -1,31 +1,16 @@
-from Shift15.Result_Function import cryptocode
+from Shift15.Crypto_Currency import cryptocode
 from Shift15.Message_Function import check
+from Shift15.Restart_Function import confirm_restart
+from Shift15.Encrypt_or_Decrypt import en_or_de
 
 print("Welcome to the Caesar Cipher Encryptor/Decryptor")
 print("Please type only letters, numbers, spaces and commas/periods.")
-print("The Caesar Cipher shifts alphabetically forward 15 units. For example, a becomes P.")
+print("The Caesar Cipher shifts alphabetically forward 15 units. For example, a becomes P.\n")
 
 while True:
+    print("The message translates into:", cryptocode(en_or_de(), check("")))
 
-    while True:
-        answer = input("Would you like to encrypt or decrypt a message? Please type encrypt or decrypt: ")
-        if answer.strip().lower() in ["encrypt", "decrypt"]:
-            break
-        print("Invalid input. Please try again.")
-
-    print("The message translates into:", cryptocode(answer.strip().lower(), check(answer.strip().lower())))
-
-    while True:
-        restart_confirm = input("Would you like to encrypt/decrypt another message? \n"
-                                "Type yes or no: ")
-
-        if restart_confirm.strip() in ["yes", "no"]:
-            break
-        else:
-            print("Invalid input. Please type yes or no.")
-            continue
-
-    if "yes" in restart_confirm.lower():
+    if "yes" in confirm_restart():
         print("The program has reset.")
         continue
     else:
