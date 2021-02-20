@@ -1,4 +1,7 @@
 # Caesar-Cipher- The CaesarCipher.py file is the main file.
+
+This program was later modified for experimental purposes in order to learn how to separate a program into many modules.
+
 This Caesar Cipher alphabetically shifts 15 to the right and converts the letter to a different case (lower
 case or upper case). The numbers shift to the right 3 units. The comma encrypts into a period, and a period 
 is encrypted into a comma. 
